@@ -37,7 +37,8 @@ Major OS Themes
 * Virtualization
   * Present physical resource as a more general, powerful, or easy-to-use form of itself
   * Present illusion of multiple \(or unlimited\) resources where only one \(or a few\) really exist
-  * Examples: CPU, Memory
+
+    Examples: CPU, Memory
 * Concurrency
   * Coordinate multiple activities to ensure correctness
 * Persistence
