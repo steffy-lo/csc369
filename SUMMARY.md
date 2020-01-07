@@ -1,4 +1,4 @@
 # Table of contents
 
-* [Initial page](README.md)
+* [Week 1: Introduction](README.md)
 
