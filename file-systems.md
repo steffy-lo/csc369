@@ -94,3 +94,15 @@ Sharing can be implemented by creating a new directory entry called a link: a po
 
 ![](.gitbook/assets/image%20%286%29.png)
 
+**Issues with Links**
+
+* With links, a file may have multiple absolute path names
+  * Traversing a file system should avoid traversing shared structures more than once
+* Maintaining consistency is a problem
+  * How do you update permissions in directory entry with a hard link?
+* Deletion: When can the space allocated to a shared file be deallocated and reused?
+  * Somewhat easier to handle with symbolic links
+    * Deletion of a link is OK; deletion of the file entry itself deallocates space and leaves the link pointers dangling
+  * Keep a reference count for hard links
+* Sharing: How can you tell when two processes are sharing the same file?
+
