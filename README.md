@@ -1,4 +1,4 @@
-# Week 1: Introduction
+# Introduction to OS
 
 ### What is the Operating System?
 

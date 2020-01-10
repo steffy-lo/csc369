@@ -1,4 +1,5 @@
 # Table of contents
 
-* [Week 1: Introduction](README.md)
+* [Introduction to OS](README.md)
+* [File Systems](file-systems.md)
 
