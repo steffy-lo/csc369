@@ -21,7 +21,7 @@ Another way to think of a ﬁle descriptor is as a **pointer to an object of typ
 
 ### Reading and Writing Files
 
-![](.gitbook/assets/image%20%287%29.png)
+![](.gitbook/assets/image%20%2813%29.png)
 
 ```text
 $ echo hello > foo
