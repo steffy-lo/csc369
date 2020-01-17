@@ -83,5 +83,11 @@ Example: Read a file with inode number 30
 * Calculate the address of inode 30 
   * 12,288 + 30 \* 128 = 16,128 \(Block 4 starts at byte 16384\)
 
+### Imbalanced Tree
 
+* Multi-Level index approach to file pointers
+* Why?
+  * Most files are small
+  * Files are usually accessed sequentially
+  * Directories are typically small \(20 or fewer entries\) 
 
