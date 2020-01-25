@@ -15,17 +15,17 @@ A freemap determines which blocks are free
 
 Data blocks: remaining blocks used to store files and directories
 
-![Green: Superblock, Red: Freemap, White: Data blocks](../.gitbook/assets/image%20%289%29.png)
+![Green: Superblock, Red: Freemap, White: Data blocks](../.gitbook/assets/image%20%2815%29.png)
 
 Disk Layout Strategies - How do you find all the blocks for a file?
 
 1. Contiguous Allocation \(Extent-based\): all blocks of file are located together on disk
 
-![](../.gitbook/assets/image%20%2813%29.png)
+![](../.gitbook/assets/image%20%2820%29.png)
 
 Linked \(or chained, structure\): each block points to the next, directory points to the first
 
-![](../.gitbook/assets/image%20%287%29.png)
+![](../.gitbook/assets/image%20%2812%29.png)
 
 Indexed Structure \(kind of like address translation
 
@@ -45,13 +45,13 @@ Indexed Structure \(kind of like address translation
     * Address of block containing addresses of single indirect blocks
   * block\[14\] is a triple indirect block pointer
 
-![UNIX inode Example](../.gitbook/assets/image%20%285%29.png)
+![UNIX inode Example](../.gitbook/assets/image%20%2810%29.png)
 
 ### Overall Organization
 
 We now develop the overall on-disk organization of the data structures of the vsfs \(Very Simple File System\) ﬁle system. The ﬁrst thing we’ll need to do is divide the disk into blocks; simple ﬁle systems use just one block size \(e.g., 4 KB\). The blocks are addressed from 0 to N − 1, in a partition of size N 4-KB blocks.
 
-![VSFS Disk Layout](../.gitbook/assets/image%20%283%29.png)
+![VSFS Disk Layout](../.gitbook/assets/image%20%287%29.png)
 
 D \(User Data\)
 
@@ -90,4 +90,37 @@ Example: Read a file with inode number 30
   * Most files are small
   * Files are usually accessed sequentially
   * Directories are typically small \(20 or fewer entries\) 
+
+### Another Approach: Extent-Based
+
+* An extent is a disk pointer plus a length \(in \# of blocks\), i.e., allocates a few blocks in a row
+* Instead of requiring a pointer to every block of a file, we just need a pointer to every several blocks \(every extent\)
+* Disadvantage: less flexible than the pointer-based approach \(external fragmentation?\)
+* Advantages: uses smaller amount of metadata per file, and file allocation is more compact
+* Adopted by ext4, HFS+, NTFS, XFS
+
+### Yet Another Approach: Link-Based
+
+* Instead of pointers to all blocks, the inode just has one pointer to the first data block of the file, then the first block points to the second block, etc.
+* Works poorly if we want to access the last block of a big file
+* Use an in-memory File Allocation Table, indexed by address of data block
+  * Faster in finding a block
+* FAT file system, used by Windows by NTFS
+
+### Unix Inodes and Path Search
+
+* Unix inodes are not directories
+* They describe where on the disk the blocks for a file are placed
+  * Directories are files, so inodes also describe where the blocks for directories are placed on the disk
+* Directory entries map file names to inodes
+
+### Operations
+
+* mkdir\(“/x”\) - Create a directory
+* creat\(“/x/y”\) - Create an empty file
+* unlink\(“/x/y”\) - Remove a file or directory
+* fd = open\(“/x/z”, O\_CREAT \| O\_WRONLY\); 
+* write\(fd, buf, BLOCKSIZE\); close\(fd\); 
+  * Open a file for writing, and write one block to it
+  * If it does not exist, create it
 
