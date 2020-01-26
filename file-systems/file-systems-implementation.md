@@ -15,17 +15,17 @@ A freemap determines which blocks are free
 
 Data blocks: remaining blocks used to store files and directories
 
-![Green: Superblock, Red: Freemap, White: Data blocks](../.gitbook/assets/image%20%2815%29.png)
+![Green: Superblock, Red: Freemap, White: Data blocks](../.gitbook/assets/image%20%2816%29.png)
 
 Disk Layout Strategies - How do you find all the blocks for a file?
 
 1. Contiguous Allocation \(Extent-based\): all blocks of file are located together on disk
 
-![](../.gitbook/assets/image%20%2820%29.png)
+![](../.gitbook/assets/image%20%2822%29.png)
 
 Linked \(or chained, structure\): each block points to the next, directory points to the first
 
-![](../.gitbook/assets/image%20%2812%29.png)
+![](../.gitbook/assets/image%20%2813%29.png)
 
 Indexed Structure \(kind of like address translation
 
@@ -45,13 +45,13 @@ Indexed Structure \(kind of like address translation
     * Address of block containing addresses of single indirect blocks
   * block\[14\] is a triple indirect block pointer
 
-![UNIX inode Example](../.gitbook/assets/image%20%2810%29.png)
+![UNIX inode Example](../.gitbook/assets/image%20%2811%29.png)
 
 ### Overall Organization
 
 We now develop the overall on-disk organization of the data structures of the vsfs \(Very Simple File System\) ﬁle system. The ﬁrst thing we’ll need to do is divide the disk into blocks; simple ﬁle systems use just one block size \(e.g., 4 KB\). The blocks are addressed from 0 to N − 1, in a partition of size N 4-KB blocks.
 
-![VSFS Disk Layout](../.gitbook/assets/image%20%287%29.png)
+![VSFS Disk Layout](../.gitbook/assets/image%20%288%29.png)
 
 D \(User Data\)
 
