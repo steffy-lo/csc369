@@ -47,7 +47,7 @@ Directories provide logical structure to file systems
   * Allows the implementation to separate logical file organization from physical file placement
   * Stores information about files \(owner, permission, etc.\)
 
-![Multi-Level Directories](../.gitbook/assets/image%20%2820%29.png)
+![Multi-Level Directories](../.gitbook/assets/image%20%2826%29.png)
 
 ### Directory Structure
 
@@ -64,7 +64,7 @@ Directories provide logical structure to file systems
 2. Acyclic-graph directories: allows for shared directories
    * The same file or subdirectory may be in 2 different directories
 
-![](../.gitbook/assets/image%20%2810%29.png)
+![](../.gitbook/assets/image%20%2812%29.png)
 
 Data Structures
 
@@ -92,7 +92,7 @@ Sharing can be implemented by creating a new directory entry called a link: a po
   * Second directory entry identical to the first
   * Mostly for convenience
 
-![](../.gitbook/assets/image%20%2812%29.png)
+![](../.gitbook/assets/image%20%2814%29.png)
 
 **Issues with Links**
 
@@ -105,4 +105,21 @@ Sharing can be implemented by creating a new directory entry called a link: a po
     * Deletion of a link is OK; deletion of the file entry itself deallocates space and leaves the link pointers dangling
   * Keep a reference count for hard links
 * Sharing: How can you tell when two processes are sharing the same file?
+
+**Summary: File System Goals**
+
+* Efficiently translate file name into file number using a directory
+* Sequential file access performance
+* Efficient random access to any file block
+* Efficient support for small files \(overhead in terms of space and access time\)
+* Support large files
+* Efficient metadata storage and lookup
+* Crash recovery
+
+**Summary: File System Components**
+
+* Index structure to locate each block of a file
+* Free space management
+* Locality heuristics
+* Crash recovery
 

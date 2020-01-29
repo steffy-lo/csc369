@@ -2,7 +2,11 @@
 
 * [Introduction to OS](README.md)
 * [File Systems](file-systems/README.md)
+  * [Solid State Drives \(SSDs\)](file-systems/solid-state-drives-ssds.md)
+  * [RAID](file-systems/raid.md)
+  * [Crash Consistency: FSCK & Journaling](file-systems/crash-consistency-fsck-and-journaling.md)
   * [Disk I/O File System Optimization](file-systems/disk-i-o-file-system-optimization.md)
   * [File Systems Implementation](file-systems/file-systems-implementation.md)
 * [File Systems: Appendix](file-systems-appendix.md)
+* [Processes](processes.md)
 
