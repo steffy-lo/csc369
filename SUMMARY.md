@@ -9,4 +9,5 @@
   * [File Systems Implementation](file-systems/file-systems-implementation.md)
 * [File Systems: Appendix](file-systems-appendix.md)
 * [Processes](processes.md)
+* [Threads](threads.md)
 

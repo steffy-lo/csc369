@@ -40,7 +40,7 @@ Chunk size mostly affects performance of the array
 * Write throughput is slower
 * If one drive fails, no data lost
 
-![Standard RAID Levels](../.gitbook/assets/image%20%2816%29.png)
+![Standard RAID Levels](../.gitbook/assets/image%20%2818%29.png)
 
 ### RAID Level 4: Saving Space With Parity
 
@@ -52,9 +52,9 @@ Chunk size mostly affects performance of the array
 
 ### RAID Level 5: Rotating Parity
 
-![](../.gitbook/assets/image%20%2831%29.png)
+![](../.gitbook/assets/image%20%2834%29.png)
 
 ### Comparison
 
-![](../.gitbook/assets/image%20%2817%29.png)
+![](../.gitbook/assets/image%20%2819%29.png)
 

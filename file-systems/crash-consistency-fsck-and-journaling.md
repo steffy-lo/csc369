@@ -35,7 +35,7 @@ If a crash takes place during the actual write =&gt; go back to journal and retr
 
 If a crash happens before journal write finishes, then it doesn’t matter since the actual write has NOT happened at all, so nothing is inconsistent
 
-![Linux Ext3 File System](../.gitbook/assets/image%20%282%29.png)
+![Linux Ext3 File System](../.gitbook/assets/image%20%284%29.png)
 
 What goes in the "log"?
 
@@ -47,11 +47,11 @@ Transaction Structure:
   * Logical Logging: log more compact logical representation \(e.g., “this update wishes to append data block Db to ﬁle X”, which is a little more complex but can save space in the log and perhaps improve performance\)
 * Ends with a "transaction end" \(TxEnd\) block, containing the corresponding TID
 
-![A Journal Entry](../.gitbook/assets/image%20%2824%29.png)
+![A Journal Entry](../.gitbook/assets/image%20%2827%29.png)
 
 **Checkpointing**: once the transaction is safely on disk, we are ready to overwrite the old structures in the file system
 
-![Data Journaling Example](../.gitbook/assets/image%20%2823%29.png)
+![Data Journaling Example](../.gitbook/assets/image%20%2826%29.png)
 
 Sequence of Operations:
 
@@ -93,7 +93,7 @@ To avoid this problem, split into two steps:
     * Jump back-and-forth between writes to journal and writes to main region
   * Metadata journaling is similar, except we only write file system metadata \(no actual data\) to the journal
 
-![Metadata Journal](../.gitbook/assets/image%20%285%29.png)
+![Metadata Journal](../.gitbook/assets/image%20%287%29.png)
 
 Important Adjustment: write data BEFORE writing metadata to journal!
 
