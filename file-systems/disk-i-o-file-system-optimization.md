@@ -81,7 +81,7 @@
   * Scheduled requests is one way to achieve this
   * Allocating related data "close together" on the disk is even more important
 
-![](../.gitbook/assets/image%20%2838%29.png)
+![](../.gitbook/assets/image%20%2839%29.png)
 
 * Pro: File size grows dynamically, allocations are independent
 * Con: Hard to achieve closeness and amortization
@@ -148,13 +148,13 @@ Original Unix File System
   * Long attributes can be stored externally, and a pointer kept in the MFT record
 * NTFS tries to allocate files in runs of consecutive blocks
 
-![MFT Record](../.gitbook/assets/image%20%2835%29.png)
+![MFT Record](../.gitbook/assets/image%20%2836%29.png)
 
 * An MFT record for a 3-run 9-block file
 * Each "data" attribute indicates the starting block and the number of blocks in a "run" \(or extent\)
 * If all the records don't fit into one MFT record, extension records can be used to hold more
 
-![MFT Record For A Small Directory](../.gitbook/assets/image%20%2840%29.png)
+![MFT Record For A Small Directory](../.gitbook/assets/image%20%2841%29.png)
 
 * Directory entries are stored as a simple list
 * Large directories use B+ trees instead

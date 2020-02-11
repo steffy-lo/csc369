@@ -52,7 +52,7 @@ Chunk size mostly affects performance of the array
 
 ### RAID Level 5: Rotating Parity
 
-![](../.gitbook/assets/image%20%2834%29.png)
+![](../.gitbook/assets/image%20%2835%29.png)
 
 ### Comparison
 

@@ -40,7 +40,7 @@ A process contains all of the state for a program in execution and is named usin
   * Process makes other system call and is blocked
   * Timer interrupt handler decides to switch processes
 
-![Context Switch](.gitbook/assets/image%20%2839%29.png)
+![Context Switch](.gitbook/assets/image%20%2840%29.png)
 
 **Process Creation**
 
