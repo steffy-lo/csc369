@@ -10,4 +10,5 @@
 * [File Systems: Appendix](file-systems-appendix.md)
 * [Processes](processes.md)
 * [Threads](threads.md)
+* [Synchronization](synchronization.md)
 

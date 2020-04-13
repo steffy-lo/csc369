@@ -47,7 +47,7 @@ Directories provide logical structure to file systems
   * Allows the implementation to separate logical file organization from physical file placement
   * Stores information about files \(owner, permission, etc.\)
 
-![Multi-Level Directories](../.gitbook/assets/image%20%2829%29.png)
+![Multi-Level Directories](../.gitbook/assets/image%20%2832%29.png)
 
 ### Directory Structure
 
@@ -64,7 +64,7 @@ Directories provide logical structure to file systems
 2. Acyclic-graph directories: allows for shared directories
    * The same file or subdirectory may be in 2 different directories
 
-![](../.gitbook/assets/image%20%2814%29.png)
+![](../.gitbook/assets/image%20%2817%29.png)
 
 Data Structures
 
@@ -92,7 +92,7 @@ Sharing can be implemented by creating a new directory entry called a link: a po
   * Second directory entry identical to the first
   * Mostly for convenience
 
-![](../.gitbook/assets/image%20%2816%29.png)
+![](../.gitbook/assets/image%20%2819%29.png)
 
 **Issues with Links**
 

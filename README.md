@@ -2,7 +2,7 @@
 
 ### What is the Operating System?
 
-![](.gitbook/assets/image%20%285%29.png)
+![](.gitbook/assets/image%20%287%29.png)
 
 The Operating System \(OS\) is in charge of making sure the system operates **correctly** and **efﬁciently** in an **easy-to-use** manner.
 

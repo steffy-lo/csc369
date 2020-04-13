@@ -1,5 +1,28 @@
 # Threads
 
+Interprocess Communication
+
+How do processes communicate?
+
+* signals
+* pipes
+* sockets
+* files
+
+Wouldn't it be nice if cooperating processes could just share memory?
+
+Parallel Programs
+
+* To execute a web server, or any parallel program using fork\(\), we need to:
+  * Create several processes that execute in parallel
+  * Cause each to map to the same address space to share data
+  * They are all part of the same computation
+  * Have the OS schedule these processes in parallel \(logically or physically\)
+* This situation is very inefficient
+  * Space: PCB, page tables, etc.
+  * Time: Create data structures, fork and copy addr space, etc.
+  * Interprocess communicaiton \(IPC\): extra work is needed to share and communicate across isolated processes
+
 The Big Idea
 
 * Separate the address space from the execution state
@@ -17,7 +40,7 @@ What is a Thread?
 * A program with multiple control flows is "multi-threaded"
   * OS must interact with multiple running programs, so it is naturally multi-threaded
 
-![Multi-Threaded Process Address Space](.gitbook/assets/image%20%2833%29.png)
+![Multi-Threaded Process Address Space](.gitbook/assets/image%20%2836%29.png)
 
 Kernel-Level Threads
 
@@ -47,6 +70,8 @@ User-Level Threads
     * Blocking a process whose thread initiated an I/O, even though the process has other threads that can execute
     * De-scheduling a process with a thread holding a lock
   * Solving this requires communication between the kernel and the user-level thread manager
+
+![](.gitbook/assets/image%20%289%29.png)
 
 POSIX Threads Tutorial: [https://computing.llnl.gov/tutorials/pthreads/\#PthreadsAPI](https://computing.llnl.gov/tutorials/pthreads/#PthreadsAPI)
 
