@@ -21,7 +21,7 @@ Disk Layout Strategies - How do you find all the blocks for a file?
 
 1. Contiguous Allocation \(Extent-based\): all blocks of file are located together on disk
 
-![](../.gitbook/assets/image%20%2834%29.png)
+![](../.gitbook/assets/image%20%2838%29.png)
 
 Linked \(or chained, structure\): each block points to the next, directory points to the first
 

@@ -47,7 +47,7 @@ Directories provide logical structure to file systems
   * Allows the implementation to separate logical file organization from physical file placement
   * Stores information about files \(owner, permission, etc.\)
 
-![Multi-Level Directories](../.gitbook/assets/image%20%2832%29.png)
+![Multi-Level Directories](../.gitbook/assets/image%20%2835%29.png)
 
 ### Directory Structure
 

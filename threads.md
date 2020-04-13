@@ -40,7 +40,7 @@ What is a Thread?
 * A program with multiple control flows is "multi-threaded"
   * OS must interact with multiple running programs, so it is naturally multi-threaded
 
-![Multi-Threaded Process Address Space](.gitbook/assets/image%20%2836%29.png)
+![Multi-Threaded Process Address Space](.gitbook/assets/image%20%2840%29.png)
 
 Kernel-Level Threads
 
