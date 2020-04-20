@@ -47,11 +47,11 @@ Transaction Structure:
   * Logical Logging: log more compact logical representation \(e.g., “this update wishes to append data block Db to ﬁle X”, which is a little more complex but can save space in the log and perhaps improve performance\)
 * Ends with a "transaction end" \(TxEnd\) block, containing the corresponding TID
 
-![A Journal Entry](../.gitbook/assets/image%20%2833%29.png)
+![A Journal Entry](../.gitbook/assets/image%20%2834%29.png)
 
 **Checkpointing**: once the transaction is safely on disk, we are ready to overwrite the old structures in the file system
 
-![Data Journaling Example](../.gitbook/assets/image%20%2831%29.png)
+![Data Journaling Example](../.gitbook/assets/image%20%2832%29.png)
 
 Sequence of Operations:
 

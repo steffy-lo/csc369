@@ -10,5 +10,6 @@
 * [File Systems: Appendix](file-systems-appendix.md)
 * [Processes](processes.md)
 * [Threads](threads.md)
-* [Synchronization](synchronization.md)
+* [Synchronization](synchronization/README.md)
+  * [Locks \(Mutexes\)](synchronization/locks-mutexes.md)
 
