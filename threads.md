@@ -40,7 +40,7 @@ What is a Thread?
 * A program with multiple control flows is "multi-threaded"
   * OS must interact with multiple running programs, so it is naturally multi-threaded
 
-![Multi-Threaded Process Address Space](.gitbook/assets/image%20%2841%29.png)
+![Multi-Threaded Process Address Space](.gitbook/assets/image%20%2849%29.png)
 
 Kernel-Level Threads
 
@@ -71,7 +71,7 @@ User-Level Threads
     * De-scheduling a process with a thread holding a lock
   * Solving this requires communication between the kernel and the user-level thread manager
 
-![](.gitbook/assets/image%20%289%29.png)
+![](.gitbook/assets/image%20%2812%29.png)
 
 POSIX Threads Tutorial: [https://computing.llnl.gov/tutorials/pthreads/\#PthreadsAPI](https://computing.llnl.gov/tutorials/pthreads/#PthreadsAPI)
 

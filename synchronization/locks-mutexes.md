@@ -110,5 +110,58 @@ int main (int argc, char *argv[]) {
 }
 ```
 
-![](../.gitbook/assets/image%20%2814%29.png)
+![](../.gitbook/assets/image%20%2818%29.png)
+
+Controlling Interrupts
+
+One of the earliest solutions used to provide mutual exclusion was to disable interrupts for critical sections
+
+Problems:
+
+* Using interrupt disabling as a general purpose synchronization solution requires too much trust in applications
+* Approach doesn't work on multiprocessors
+  * If multiple threads are running on different CPUs, and each try to enter the same critical section, it doesn't matter whether interrupts are disabled; threads will be able to run on on other processors, and thus could enter the critical section
+* Turning off interrupts for extended periods of time can lead to interrupts becoming lost, which can lead to serious system problems
+
+Atomic Instructions: Test and Set
+
+* Record the old value of the variable
+* Set the variable to some non-zero value
+* Return the old value
+
+Hardware executes this atomically
+
+```text
+boolean test_and_set(boolean *lock) {
+    boolean old = *lock;
+    *lock = True;
+    return old;
+}
+```
+
+* **lock** is always **True** on exit from test-and-set
+  * Either it was True \(locked\) already, and nothing changed, or it was **False** \(available\), but the caller now holds it
+* Return value is either **True** if it was locked already, or **False** if it was previously available
+
+### A Lock Implementation
+
+![Spin Lock](../.gitbook/assets/image%20%2833%29.png)
+
+* Spin locks are built on machine instructions
+* Spin locks have 3 problems:
+  1. Busy waiting
+  2. Starvation is possible
+     * When a thread leaves its CS, the next one to enter depends on scheduling
+     * A waiting thread could be denied entry indefinitely
+  3. Deadlock is possible through priority inversion
+
+**Sleep Locks**
+
+* Instead of spinning, put thread to sleep \(into "blocked" state\) while waiting to acquire a lock
+* Requires a queue for waiting threads \(e.g., Linux = wait queues\)
+
+```text
+wait_event(queue, condition)
+wake_up(wait_queue_head_t *queue);
+```
 

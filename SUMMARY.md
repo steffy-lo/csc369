@@ -12,4 +12,6 @@
 * [Threads](threads.md)
 * [Synchronization](synchronization/README.md)
   * [Locks \(Mutexes\)](synchronization/locks-mutexes.md)
+  * [Condition Variables \(CVs\)](synchronization/condition-variables-cvs.md)
+  * [Semaphores](synchronization/semaphores.md)
 
