@@ -13,5 +13,7 @@
 * [Synchronization](synchronization/README.md)
   * [Locks \(Mutexes\)](synchronization/locks-mutexes.md)
   * [Condition Variables \(CVs\)](synchronization/condition-variables-cvs.md)
-  * [Semaphores](synchronization/semaphores.md)
+  * [Semaphores](synchronization/semaphores/README.md)
+    * [Exercises](synchronization/semaphores/exercises.md)
+* [Scheduling](scheduling.md)
 

@@ -40,7 +40,7 @@ A process contains all of the state for a program in execution and is named usin
   * Process makes other system call and is blocked
   * Timer interrupt handler decides to switch processes
 
-![Context Switch](.gitbook/assets/image%20%2858%29.png)
+![Context Switch](.gitbook/assets/image%20%2864%29.png)
 
 **Process Creation**
 
@@ -92,5 +92,5 @@ System Call Dispatch
 7. Kernel invokes corresponding function
 8. Kernel returns by running iret \(interrupt return\)
 
-![Linux Write System Call](.gitbook/assets/image%20%2836%29.png)
+![Linux Write System Call](.gitbook/assets/image%20%2840%29.png)
 
