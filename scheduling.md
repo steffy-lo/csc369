@@ -10,9 +10,9 @@
 
 Starting simple, assume that processes run to completion when they are first scheduled. The goal is to minimize average wait time.
 
-![](.gitbook/assets/image%20%2828%29.png)
+![](.gitbook/assets/image%20%2834%29.png)
 
-![](.gitbook/assets/image%20%2849%29.png)
+![](.gitbook/assets/image%20%2856%29.png)
 
 * Average waiting time under FCFS is often quite long
   * Convoy effect: all other processes wait for the one big process to release the CPU
@@ -29,7 +29,7 @@ In practice, we don't know how long a thread will run. Threads don't just use th
   * I/O-bound: short CPU bursts, frequent \(long\) I/O bursts
 * During I/O bursts, CPU is not needed
 
-![Process State Diagram](.gitbook/assets/image%20%2850%29.png)
+![Process State Diagram](.gitbook/assets/image%20%2858%29.png)
 
 ### Scheduling Goals
 
@@ -49,7 +49,7 @@ In practice, we don't know how long a thread will run. Threads don't just use th
   * Meet deadlines
   * Predictability
 
-![Focus: Short-Term Scheduler](.gitbook/assets/image%20%287%29.png)
+![Focus: Short-Term Scheduler](.gitbook/assets/image%20%2812%29.png)
 
 **Short-Term Scheduler**
 

@@ -1,12 +1,12 @@
 # Exercises
 
-![](../../.gitbook/assets/image%20%2831%29.png)
+![](../../.gitbook/assets/image%20%2837%29.png)
 
 ### Dining Philosopher's Problem
 
 There are 5 philosophers seated at a table with one chopstick between each. A philosopher needs two chopsticks to eat. 
 
-![Dining Philosopher&apos;s Problem](../../.gitbook/assets/image%20%2816%29.png)
+![Dining Philosopher&apos;s Problem](../../.gitbook/assets/image%20%2821%29.png)
 
 1. Mutual Exclusion
    * Only one philosopher can hold a chopstick at the same time

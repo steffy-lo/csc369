@@ -21,7 +21,7 @@ Arbitrary interleaving of thread execution can have unexpected consequences
 
 Suppose we write functions to handle withdrawals and deposits to bank account:
 
-![](../.gitbook/assets/image%20%286%29.png)
+![](../.gitbook/assets/image%20%2810%29.png)
 
 Now suppose you share this account with someone and the balance is $1000. You each go to separate ATM machines to withdraw - you withdraw $100 and the other person deposits $100.
 
@@ -29,7 +29,7 @@ The problem is that the execution of the two processes can be interleaved.
 
 ![](../.gitbook/assets/image.png)
 
-![](../.gitbook/assets/image%20%2856%29.png)
+![](../.gitbook/assets/image%20%2864%29.png)
 
 **What Went Wrong?**
 
@@ -57,7 +57,7 @@ Critical Section Requirements:
 3. Bounded waiting \(no starvation\)
    * If some thread T is waiting on the CS, then there is a limit on the number of times other threads can enter CS before this thread is granted access
 
-![](../.gitbook/assets/image%20%2839%29.png)
+![](../.gitbook/assets/image%20%2845%29.png)
 
 Performance
 
@@ -65,7 +65,7 @@ Performance
 
 ### **2-Thread Solutions**
 
-![Solution A](../.gitbook/assets/image%20%2836%29.png)
+![Solution A](../.gitbook/assets/image%20%2842%29.png)
 
 * **Mutual Exclusion**
   * Yes, turn can only have one value, so if thread A is repeatedly executing the while loop condition then turn is 1 and thread B could pass through the loop. Since turn is only set to 0 when B is leaving the critical section, A cannot enter the critical section until B has left
@@ -74,7 +74,7 @@ Performance
 * **No Starvation**
   * Since progress is not satisfied, there's no point in talking about starvation
 
-![Solution B](../.gitbook/assets/image%20%2843%29.png)
+![Solution B](../.gitbook/assets/image%20%2850%29.png)
 
 * **Mutual Exclusion**
   * Not satisﬁed because if both threads can pass through the while loop before either of them set their own ﬂag to true. No we have both threads in the critical section at the same time.

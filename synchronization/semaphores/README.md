@@ -8,7 +8,7 @@
   * The atomic operation signal \(also called V or increment\)
     * Increment the variable, unblock a waiting thread if there are any
 
-![Definition: Semaphore](../../.gitbook/assets/image%20%2863%29.png)
+![Definition: Semaphore](../../.gitbook/assets/image%20%2873%29.png)
 
 ### Types of Semaphores
 
@@ -21,7 +21,7 @@
   * Max number of threads is determined by semaphore's initial value, count
     * Mutex has count = 1, counting has count = N
 
-![](../../.gitbook/assets/image%20%2817%29.png)
+![](../../.gitbook/assets/image%20%2822%29.png)
 
 **Atomicity of Wait\( \) and signal\( \)**
 
@@ -31,12 +31,12 @@
   * Uniprocessor: disable interrupts or use hardware instructions
   * Multiprocessor: use hardware instructions
 
-![A Rendezvous Problem](../../.gitbook/assets/image%20%2841%29.png)
+![A Rendezvous Problem](../../.gitbook/assets/image%20%2848%29.png)
 
 It is guaranteed that:
 
 * a1 will happen before b2
 * b1 will happen before a2
 
-![](../../.gitbook/assets/image%20%2844%29.png)
+![](../../.gitbook/assets/image%20%2851%29.png)
 

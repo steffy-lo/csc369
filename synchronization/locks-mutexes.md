@@ -110,7 +110,7 @@ int main (int argc, char *argv[]) {
 }
 ```
 
-![](../.gitbook/assets/image%20%2820%29.png)
+![](../.gitbook/assets/image%20%2825%29.png)
 
 Controlling Interrupts
 
@@ -145,7 +145,7 @@ boolean test_and_set(boolean *lock) {
 
 ### A Lock Implementation
 
-![Spin Lock](../.gitbook/assets/image%20%2837%29.png)
+![Spin Lock](../.gitbook/assets/image%20%2843%29.png)
 
 * Spin locks are built on machine instructions
 * Spin locks have 3 problems:

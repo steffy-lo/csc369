@@ -16,4 +16,5 @@
   * [Semaphores](synchronization/semaphores/README.md)
     * [Exercises](synchronization/semaphores/exercises.md)
 * [Scheduling](scheduling.md)
+* [Virtual Memory](virtual-memory.md)
 
